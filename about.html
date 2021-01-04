@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<script>
+function set_name(name) {
+    name = name || "WebSurfer";
+    localStorage.setItem("name", name);
+    localStorage.setItem("expire", Date.now() + (1000 * 60));
+    return name;
+}
+function get_name() {
+    const expire = localStorage.getItem("expire");
+    if (expire && Date.now() > expire) {
+        return null;
+    }
+    
+    return localStorage.getItem("name");
+}
+const name = get_name() || set_name(prompt("Please enter your name"));
+document.writeln("<center><h3 class=\"greetings\">Greetings, " + name + "</h3></center>");
+</script>
+<meta charset="utf-8">
+<title>Assignment 3</title>
+<style type="text/css">
+.navbar {
+    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    font-size: 14px;
+    color: #FFFFF8;
+    background-color: #414141;
+    height: 60px;
+    position: relative;
+    border: thick solid #8002FE;
+    margin-bottom: 16px;
+    margin-right: 8px;
+    margin-left: 8px;
+}
+.navbar ul {
+    padding: 0;
+    margin: 0;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+    color: #8002FE;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+.navbar ul li {
+    display: inline;
+    list-style-type: none;
+    margin-left: 140px;
+    margin-right: 140px;
+    font-size: xx-large;
+    color: #FFFFFF;
+    height: auto;
+}
+ul li a {
+    color: #8002FE;
+    text-decoration: none;
+}
+.navbar a:hover {
+    color: #FFFFFF;
+}
+body {
+    background-color: #313131;
+    padding: 0;
+    margin: 0;
+    color: #FFFFFF;
+}
+.greetings {
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+body ul li {
+}
+.filmson {
+    background-color: #414141;
+    border: thick solid #8002FE;
+    text-decoration: none;
+    list-style-type: none;
+    color: #8002FE;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+    text-align: center;
+    margin-right: 8px;
+    margin-left: 8px;
+}
+.feedback {
+    border: thick solid #7900FF;
+    display: inline;
+}
+</style>
+</head>
+
+<body text="#FFFFFF" style="font-size: 36px; color: #FFFFFF; font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, sans-serif;">
+<img src="images/header.png" width="1920" height="150" alt=""/>
+<div class="navbar">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li>About</li>
+    <li><a href="junior.html">Junior</a></li>
+    <li><a href="offers.html">Offers</a></li>
+    <li><a href="news.html">News</a>
+    </li>
+  </ul>
+</div> 
+<div class="feedback"><input></div>
+</body>
+</html>

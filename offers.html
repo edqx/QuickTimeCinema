@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+<script>
+function set_name(name) {
+    name = name || "WebSurfer";
+    localStorage.setItem("name", name);
+    localStorage.setItem("expire", Date.now() + (1000 * 60));
+    return name;
+}
+function get_name() {
+    const expire = localStorage.getItem("expire");
+    if (expire && Date.now() > expire) {
+        return null;
+    }
+    
+    return localStorage.getItem("name");
+}
+const name = get_name() || set_name(prompt("Please enter your name"));
+document.writeln("<center><h3 class=\"greetings\">Greetings, " + name + "</h3></center>");
+</script>
+<title>Assignment 3</title>
+<style type="text/css">
+.navbar {
+    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    font-size: 14px;
+    color: #FFFFF8;
+    background-color: #414141;
+    height: 60px;
+    position: relative;
+    border: thick solid #8002FE;
+    margin-bottom: 16px;
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-top: 16px;
+}
+.navbar ul {
+    padding-top: 14px;
+    padding-right: 14px;
+    padding-left: 14px;
+    margin: 0;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+    color: #8002FE;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    text-decoration: none;
+    padding-bottom: 14px;
+}
+.navbar ul li {
+    display: inline;
+    list-style-type: none;
+    margin-left: 135px;
+    margin-right: 135px;
+    font-size: xx-large;
+    color: #FFFFFF;
+    height: auto;
+    margin-top: 0px;
+    text-decoration: none;
+}
+ul li a {
+    color: #8002FE;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+	
+body {
+    background-color: #313131;
+    padding: 0;
+    margin: 0;
+    color: #313131;
+    overflow-x: hidden;
+}
+.greetings {
+    margin-bottom: 14px;
+    margin-top: 14px;
+    color: #F8F8F8;
+    font-size: larger;
+    font-weight: bold;
+}
+body ul li {
+    text-decoration: none;
+}
+.filmson {
+    background-color: #414141;
+    border: thick solid #8002FE;
+    text-decoration: none;
+    list-style-type: none;
+    color: #8002FE;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+    text-align: left;
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+.film {
+    margin-left: 40px;
+    display: inline;
+    margin-top: 25px;
+}
+.filmson .filmsontitle {
+    text-align: center;
+}
+.filmson .film1 {
+    display: flex;
+}
+.filmson .film1 .filmdesc1 {
+    margin-top: 16px;
+    margin-left: 16px;
+    text-decoration: underline;
+    color: #8002FE;
+    font-size: 50px;
+}
+	
+.filmson .film1 .film1time {
+}
+.filmson .filmstimes {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
+    margin-bottom: 10px;
+}
+</style>
+</head>
+<body text="#FFFFFF" style="font-size: 36px; color: #313131; font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, sans-serif; background-color: #313131;">
+<img src="images/header.png" width="1920" height="150" alt=""/>
+<div class="navbar">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="junior.html">Junior</a></li>
+    <li>Offers</li>
+    <li><a href="news.html">News</a>
+    </li>
+  </ul>
+</div>	
+
+	<div class="filmson">
+	<div class="filmsontitle"> 
+			<li>Offers available</li> 
+	</div>
+	<div class="filmstimes">
+		<img src="images/offer1.png" alt="" height="700" class="film"/>
+		<img src="images/offer placeholder.png" alt="" height="700" class="film"/>
+		<img src="images/offer placeholder.png" alt="" height="700" class="film"/>
+		</div>
+	</div>
+</body>
+</html>
