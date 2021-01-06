@@ -46,8 +46,8 @@ document.writeln("<center><h3 class=\"greetings\">Greetings, " + name + "</h3></
 .navbar ul li {
     display: inline;
     list-style-type: none;
-    margin-left: 140px;
-    margin-right: 140px;
+    margin-left: 105px;
+    margin-right: 105px;
     font-size: xx-large;
     color: #FFFFFF;
     height: auto;
@@ -84,11 +84,43 @@ body ul li {
 }
 .feedback {
     border: thick solid #7900FF;
-    display: inline;
+}
+
+.feedback{
+    color: #8002FE;
+    padding-left: 7px;
+    padding-right: 7px;
+    margin-right: 10px;
+}
+
+.feedback textarea{
+		resize: none;
+}
+.send a {
+    color: #8002FE;
+    text-decoration: none;
+}
+.send a:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.about .abouttext {
+    margin-left: 10px;
+    color: #8002FE;
+    margin-right: 10px;
+    border-width: thick;
+    border-style: solid;
+    padding-left: 10px;
+}
+.about .abouttext .number {
+    margin-top: -40px;
+	margin-bottom: -30px;
+}
+.about {
+	display: flex;
 }
 </style>
 </head>
-
 <body text="#FFFFFF" style="font-size: 36px; color: #FFFFFF; font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, sans-serif;">
 <img src="images/header.png" width="1920" height="150" alt=""/>
 <div class="navbar">
@@ -97,10 +129,24 @@ body ul li {
     <li>About</li>
     <li><a href="junior.html">Junior</a></li>
     <li><a href="offers.html">Offers</a></li>
-    <li><a href="news.html">News</a>
-    </li>
+    <li><a href="news.html">News</a></li>
+	<li><a href="login.html">Login</a></li>
   </ul>
 </div> 
-<div class="feedback"><input></div>
+<div class="about">
+	<div class="abouttext">
+		<div><h3>About us</h3></div>
+		<div><p>Quicktime Cinema is a cinema that provides high quality films</p></div>
+		<div><p>Contact us:</p></div>
+		<div class="number"><p>Phone number: +44 1632 960845</p></div>
+		<div><p>Email: quicktimecinema@gmail.com</p></div>
+	</div>
+	<div class="feedback">
+		<div style="margin-top: 0px">Make a feedback form</div>
+		<div><input placeholder="Email" type="text"></div>
+		<textarea rows="20" cols="142" placeholder="Any feedback is appreciated"></textarea>
+		<div class="send"><a href="about.html">Send</a></div>
+	</div>
+</div>
 </body>
 </html>
