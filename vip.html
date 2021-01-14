@@ -35,10 +35,12 @@ document.writeln("<center><h3 class=\"greetings\">Greetings, " + name + "</h3></
     margin-left: 8px;
 }
 .navbar ul {
+    padding: 0;
+    margin: 0;
     font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
     color: #8002FE;
     position: absolute;
-    top: 25%;
+    top: 50%;
     transform: translate(0,-50%);
 }
 .navbar ul li {
@@ -67,39 +69,21 @@ body {
     margin-bottom: 8px;
     margin-top: 8px;
 }
-.login {
-    margin-left: 45%;
-}
-.loginbutton .register p {
-}
-.loginbutton a:hover {
-    color: #FFFFFF;
-}
-
-.loginbutton a {
+.members {
     color: #8002FE;
-    text-decoration: none;
-	}
-
-.register{
-    margin-left: 33%;
+    border-width: thick;
+    border-style: solid;
+    margin-left: 8px;
+    margin-right: 8px;
+    padding-left: 8px;
+    display: flex;
+    padding-right: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
-
-.register a {
-    color: #8002FE;
-    text-decoration: none;
-	}
-	
-.register a:hover {
+.members p a {
     color: #FFFFFF;
     text-decoration: none;
-	}
-		
-.login div a {    
-		color: #8002FE;
-}
-.login .loginbutton a {
-    margin-left: -45px;
 }
 </style>
 </head>
@@ -113,17 +97,17 @@ body {
     <li><a href="junior.html">Junior</a></li>
     <li><a href="offers.html">Offers</a></li>
     <li><a href="news.html">News</a></li>
-	<li><a href="vip.html">Members</a></li>
-	<li>Login</li>
+	<li>Members</li>
+	<li><a href="login.html">Login</a></li>
   </ul>
 </div>
-	<div class="login">
-	<div><input type="text"></div>
-	<input type="text">
-		<div class="loginbutton">
-			<a href="login.html">Create account</a>
-		</div>
+<div class="members">
+	<div class="memberstext">
+	<h1>Members</h1>
+	<p>Members of Quicktime Cinema get access to VIP seats, special deals and discounts and have priority for viewings</p>
+	<p>For £5.99 a month, click <a href="vip.html">here</a> to buy</p>
 	</div>
-<div class="register"><p>Already got an account? Log in <a href="login.html">here</a></p></div>
+	<img src="images/members image.jpg" width="1500" alt=""/> 
+	</div>
 </body>	
 </html>

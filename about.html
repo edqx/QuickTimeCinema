@@ -46,8 +46,8 @@ document.writeln("<center><h3 class=\"greetings\">Greetings, " + name + "</h3></
 .navbar ul li {
     display: inline;
     list-style-type: none;
-    margin-left: 105px;
-    margin-right: 105px;
+    margin-left: 80px;
+    margin-right: 80px;
     font-size: xx-large;
     color: #FFFFFF;
     height: auto;
@@ -119,6 +119,9 @@ body ul li {
 .about {
 	display: flex;
 }
+.about .feedback .feedbackheading {
+    margin-bottom: -50px;
+}
 </style>
 </head>
 <body text="#FFFFFF" style="font-size: 36px; color: #FFFFFF; font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, sans-serif;">
@@ -130,20 +133,22 @@ body ul li {
     <li><a href="junior.html">Junior</a></li>
     <li><a href="offers.html">Offers</a></li>
     <li><a href="news.html">News</a></li>
+	<li><a href="vip.html">Members</a></li>
 	<li><a href="login.html">Login</a></li>
   </ul>
 </div> 
 <div class="about">
 	<div class="abouttext">
-		<div><h3>About us</h3></div>
-		<div><p>Quicktime Cinema is a cinema that provides high quality films</p></div>
-		<div><p>Contact us:</p></div>
+		<h3>About us</h3>
+		<p>Quicktime Cinema is a cinema that provides high quality films. Find us at: 38  Eastbourne Rd, Huddersfield</p>
+		<p>Contact us:</p>
 		<div class="number"><p>Phone number: +44 1632 960845</p></div>
-		<div><p>Email: quicktimecinema@gmail.com</p></div>
+		<p>Email: quicktimecinema@gmail.com</p>
 	</div>
 	<div class="feedback">
-		<div style="margin-top: 0px">Make a feedback form</div>
-		<div><input placeholder="Email" type="text"></div>
+		<div class="feedbackheading"><h3>Make a feedback form</h3></div>
+		<input placeholder="Email" type="text">
+		<input placeholder="First name" type="text">
 		<textarea rows="20" cols="142" placeholder="Any feedback is appreciated"></textarea>
 		<div class="send"><a href="about.html">Send</a></div>
 	</div>
